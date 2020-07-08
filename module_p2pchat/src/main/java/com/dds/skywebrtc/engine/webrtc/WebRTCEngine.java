@@ -374,19 +374,14 @@ public class WebRTCEngine implements IEngine, Peer.IPeerEvent {
 
     private void initIceServer() {
         // 初始化一些stun和turn的地址
-        PeerConnection.IceServer var1 = PeerConnection.IceServer.builder("stun:stun.l.google.com:19302")
+        PeerConnection.IceServer var11 = PeerConnection.IceServer.builder("stun:bj.speedata.cn:3478?transport=udp")
                 .createIceServer();
-        iceServers.add(var1);
-
-
-        PeerConnection.IceServer var11 = PeerConnection.IceServer.builder("stun:47.93.186.97:3478?transport=udp")
-                .createIceServer();
-        PeerConnection.IceServer var12 = PeerConnection.IceServer.builder("turn:47.93.186.97:3478?transport=udp")
-                .setUsername("ddssingsong")
+        PeerConnection.IceServer var12 = PeerConnection.IceServer.builder("turn:bj.speedata.cn:3478?transport=udp")
+                .setUsername("speedata")
                 .setPassword("123456")
                 .createIceServer();
-        PeerConnection.IceServer var13 = PeerConnection.IceServer.builder("turn:47.93.186.97:3478?transport=tcp")
-                .setUsername("ddssingsong")
+        PeerConnection.IceServer var13 = PeerConnection.IceServer.builder("turn:bj.speedata.cn:3478?transport=tcp")
+                .setUsername("speedata")
                 .setPassword("123456")
                 .createIceServer();
         iceServers.add(var11);
